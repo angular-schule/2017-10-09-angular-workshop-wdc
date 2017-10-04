@@ -9,7 +9,7 @@
 **Schön, dass Du dabei bist!**  
 Merke dir schon einmal dieses Repository.
 Hier wird während des Workshops stets der Quelltext unserer Beispielanwendung verfügbar sein.
-> **[https://github.com/<wbr>angular-schule/2017-10-09-angular-workshop-wdc](https://github.com/angular-schule/2017-10-09-angular-workshop-wdc)**
+> **[https://github.com/ angular-schule/2017-10-09-angular-workshop-wdc](https://github.com/angular-schule/2017-10-09-angular-workshop-wdc)**
 
 Damit wir gleich durchstarten können, solltest Du ein paar Vorbereitungen treffen.
 Die gesamte Installation wird rund 15 Minuten dauern. 
