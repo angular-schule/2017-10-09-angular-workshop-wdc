@@ -2,6 +2,8 @@
   ISBN: {{ isbn }}
 </p>
 
+{{ books$ | async | json }}
+
 <a routerLink="/dashboard" class="btn btn-secondary">Zum Dashboard</a>
 <a routerLink="/book/111" class="btn btn-secondary">Zum Buch 111</a>
 
