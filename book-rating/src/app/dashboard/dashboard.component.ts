@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
 
   books: Book[];
   url = 'https://angular.io';
+  names = ['Tim', 'Marius', 'Michael', 'Daniel', 'Ferdinand'];
 
   constructor() { }
 

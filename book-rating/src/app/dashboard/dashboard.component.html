@@ -1,4 +1,12 @@
-<br-book [book]="books[0]"></br-book>
+<br-book *ngFor="let b of books" [book]="b"></br-book>
+
+
+<hr>
+
+<div *ngFor="let n of names; index as i; first as f">
+  {{ i + 1 }})  {{ n }}
+</div>
+
 
 <hr>
 
