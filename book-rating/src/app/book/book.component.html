@@ -21,5 +21,6 @@
 
     <button class="btn btn-secondary fa fa-thumbs-up" (click)="rateUp()"></button>
     <button class="btn btn-secondary fa fa-thumbs-down" (click)="rateDown()"></button>
+    <a [routerLink]="['/book', book.isbn]" class="btn btn-secondary">Details</a>
   </div>
 </div>
