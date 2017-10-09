@@ -10,14 +10,14 @@ import { Book } from '../shared/book';
 })
 export class DashboardComponent implements OnInit {
 
-  books: Book[];
+  books: Book[] = [];
   url = 'https://angular.io';
   names = ['Tim', 'Marius', 'Michael', 'Daniel', 'Ferdinand'];
 
   constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-    this.books = this.bs.getAllStatic();
+    this.bs.getAll().subscribe(books => this.books = books);
   }
 
   reorderBooks(book: Book) {
