@@ -6,4 +6,16 @@ export class Book {
     public description: string,
     public rating: number = 1) {
   }
+
+  rateUp() {
+    if (this.rating < 5) {
+      this.rating++;
+    }
+  }
+
+  rateDown() {
+    if (this.rating > 1) {
+      this.rating--;
+    }
+  }
 }
