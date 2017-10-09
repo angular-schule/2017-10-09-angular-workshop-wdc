@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BookStoreService } from '../shared/book-store.service';
 import { Book } from '../shared/book';
 
 @Component({
@@ -13,13 +14,10 @@ export class DashboardComponent implements OnInit {
   url = 'https://angular.io';
   names = ['Tim', 'Marius', 'Michael', 'Daniel', 'Ferdinand'];
 
-  constructor() { }
+  constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-    this.books = [
-      new Book('000', 'Angular', 'Grundlagen, fortgeschrittene Techniken und Best Practices', 5),
-      new Book('111', 'React', 'von Facebook', 3)
-    ];
+    this.books = this.bs.getAllStatic();
   }
 
   reorderBooks(book: Book) {
