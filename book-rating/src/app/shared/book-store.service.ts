@@ -1,3 +1,4 @@
+import { BookResponse } from './book-response';
 import { Observable } from 'rxjs/Rx';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -12,12 +13,12 @@ export class BookStoreService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Book[]> {
-     return this.http.get<any[]>('https://api.angular.schule/books')
+     return this.http.get<BookResponse[]>('https://api.angular.schule/books')
       .map(rawBooks =>
         rawBooks.map(b =>
           new Book(b.isbn, b.title, b.description, b.rating)
         )
-      ).delay(2000);
+      );
   }
 
   getAllStatic(): Book[] {
