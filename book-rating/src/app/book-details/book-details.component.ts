@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'br-book-details',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookDetailsComponent implements OnInit {
 
-  constructor() { }
+  isbn: string;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log('ngOnInit()');
+    // this.isbn = this.route.snapshot.params.isbn;
+    this.route.params.subscribe(params => this.isbn = params.isbn);
   }
 
 }
